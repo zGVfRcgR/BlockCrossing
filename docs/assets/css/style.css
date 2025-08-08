@@ -1,27 +1,100 @@
+/* === 踏切風テーブル === */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 2em 0;
+  background: repeating-linear-gradient(90deg, #ffcc00 0 20px, #000 20px 40px);
+  border-radius: 12px;
+  box-shadow: 0 0 0 6px #ffcc00, 0 0 0 12px #000;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 0.8em 1em;
+  border: none;
+  text-align: left;
+}
+
+th {
+  background: repeating-linear-gradient(135deg, #ffcc00 0 16px, #000 16px 32px);
+  color: #000;
+  font-weight: bold;
+  border-bottom: 4px solid #ffcc00;
+  text-shadow: 1px 1px 2px #fff;
+}
+
+td {
+  background-color: rgba(0,0,0,0.85);
+  color: #ffcc00;
+  border-bottom: 1px solid #ffcc00;
+  text-shadow: 1px 1px 2px #000;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
 /* === BlockCrossing Theme === */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
   background-color: #000000;
-  color: #ffcc00; /* 踏切風の黄色 */
+  color: #fff; /* 可読性向上のため白文字 */
 
-  background-image: url('images/fumikiri-bg.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
+  background-image:
+    repeating-linear-gradient(90deg, #ffcc00 0 20px, #000 20px 40px),
+    repeating-linear-gradient(180deg, #ffcc00 0 20px, #000 20px 40px),
+    url('images/fumikiri-bg.jpg');
+  background-size:
+    100% 20px,
+    20px 100%,
+    cover;
+  background-repeat:
+    repeat-x,
+    repeat-y,
+    no-repeat;
+  background-position:
+    top,
+    left,
+    center center;
+  background-attachment:
+    scroll,
+    scroll,
+    fixed;
+  box-sizing: border-box;
+  min-height: 100vh;
+  border: 10px solid transparent;
+  /* 内側に余白を追加 */
+  padding: 30px;
 }
 
 h1, h2, h3 {
   color: #ffcc00;
   border-left: 8px solid #ffcc00;
   padding-left: 8px;
+  text-shadow: 2px 2px 4px #000;
+}
+
+h2.table-title, h3.table-title {
+  position: relative;
+  margin-bottom: 2.5em;
+}
+
+h2.table-title::after, h3.table-title::after {
+  content: "";
+  display: block;
+  height: 18px;
+  margin-top: 10px;
+  border-radius: 4px;
+  background: repeating-linear-gradient(90deg, #ffcc00 0 20px, #000 20px 40px);
+}
 }
 
 a {
   color: #ffcc00;
   text-decoration: underline;
+  text-shadow: 1px 1px 2px #000;
 }
 
 section {
@@ -29,6 +102,7 @@ section {
   padding: 1.5em;
   border-radius: 8px;
   margin: 1em 0;
+  box-shadow: 0 0 0 8px #ffcc00, 0 0 0 16px #000;
 }
 
 /* アイキャッチ風ボックス */

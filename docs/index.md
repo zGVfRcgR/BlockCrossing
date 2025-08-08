@@ -1,3 +1,8 @@
+---
+layout: default
+title: BlockCrossing
+---
+
 # 🚧 BlockCrossing
 
 > 🚦 踏切の向こうで、何が待っているんだろう？
