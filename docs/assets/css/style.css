@@ -39,3 +39,28 @@ section {
   margin-bottom: 2em;
   border: 2px dashed #ffcc00;
 }
+
+.block-nav ul {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+  justify-content: center;
+}
+
+.block-nav li a {
+  display: block;
+  padding: 12px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #2e7d32;
+  box-shadow: 2px 2px 0 #1b5e20;
+  transition: transform 0.1s ease;
+}
+
+.block-nav li a:hover {
+  background-color: #66bb6a;
+  transform: translateY(-2px);
+}
